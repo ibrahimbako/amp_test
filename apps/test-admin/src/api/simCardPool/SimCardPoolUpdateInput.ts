@@ -1,4 +1,4 @@
 export type SimCardPoolUpdateInput = {
-  pool?: Array<"Test1" | "Test2">;
+  pool?: string;
   updatedAt?: string;
 };

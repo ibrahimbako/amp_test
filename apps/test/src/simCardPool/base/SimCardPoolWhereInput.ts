@@ -27,6 +27,17 @@ class SimCardPoolWhereInput {
     nullable: true,
   })
   id?: StringFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringFilter,
+  })
+  @Type(() => StringFilter)
+  @IsOptional()
+  @Field(() => StringFilter, {
+    nullable: true,
+  })
+  pool?: StringFilter;
 }
 
 export { SimCardPoolWhereInput as SimCardPoolWhereInput };

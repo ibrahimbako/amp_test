@@ -11,24 +11,20 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { EnumSimCardPoolPool } from "./EnumSimCardPoolPool";
-import { IsEnum, IsOptional, IsString } from "class-validator";
+import { IsString, IsOptional } from "class-validator";
 
 @InputType()
 class SimCardPoolUpdateInput {
   @ApiProperty({
     required: false,
-    enum: EnumSimCardPoolPool,
-    isArray: true,
+    type: String,
   })
-  @IsEnum(EnumSimCardPoolPool, {
-    each: true,
-  })
+  @IsString()
   @IsOptional()
-  @Field(() => [EnumSimCardPoolPool], {
+  @Field(() => String, {
     nullable: true,
   })
-  pool?: Array<"Test1" | "Test2">;
+  pool?: string;
 
   @ApiProperty({
     required: false,

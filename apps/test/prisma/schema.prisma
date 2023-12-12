@@ -67,13 +67,8 @@ model Product {
 }
 
 model SimCardPool {
-  createdAt DateTime              @default(now())
-  id        String                @id @default(cuid())
-  pool      EnumSimCardPoolPool[]
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  pool      String
   updatedAt String
-}
-
-enum EnumSimCardPoolPool {
-  Test1
-  Test2
 }
