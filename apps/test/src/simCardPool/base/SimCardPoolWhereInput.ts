@@ -14,7 +14,6 @@ import { ApiProperty } from "@nestjs/swagger";
 import { StringFilter } from "../../util/StringFilter";
 import { Type } from "class-transformer";
 import { IsOptional } from "class-validator";
-import { StringNullableFilter } from "../../util/StringNullableFilter";
 
 @InputType()
 class SimCardPoolWhereInput {
@@ -28,17 +27,6 @@ class SimCardPoolWhereInput {
     nullable: true,
   })
   id?: StringFilter;
-
-  @ApiProperty({
-    required: false,
-    type: StringNullableFilter,
-  })
-  @Type(() => StringNullableFilter)
-  @IsOptional()
-  @Field(() => StringNullableFilter, {
-    nullable: true,
-  })
-  pool?: StringNullableFilter;
 }
 
 export { SimCardPoolWhereInput as SimCardPoolWhereInput };

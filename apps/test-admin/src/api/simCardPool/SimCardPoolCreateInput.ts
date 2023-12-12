@@ -1,4 +1,4 @@
 export type SimCardPoolCreateInput = {
-  pool?: string | null;
+  pool?: Array<"Test1" | "Test2">;
   updatedAt: string;
 };

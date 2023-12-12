@@ -20,27 +20,23 @@ const existingId = "existingId";
 const CREATE_INPUT = {
   createdAt: new Date(),
   id: "exampleId",
-  pool: "examplePool",
   updatedAt: "exampleUpdatedAt",
 };
 const CREATE_RESULT = {
   createdAt: new Date(),
   id: "exampleId",
-  pool: "examplePool",
   updatedAt: "exampleUpdatedAt",
 };
 const FIND_MANY_RESULT = [
   {
     createdAt: new Date(),
     id: "exampleId",
-    pool: "examplePool",
     updatedAt: "exampleUpdatedAt",
   },
 ];
 const FIND_ONE_RESULT = {
   createdAt: new Date(),
   id: "exampleId",
-  pool: "examplePool",
   updatedAt: "exampleUpdatedAt",
 };
 
