@@ -39,6 +39,17 @@ class SimCardPoolOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
+  gammuExcluded?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @IsOptional()
+  @IsEnum(SortOrder)
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
   id?: SortOrder;
 
   @ApiProperty({

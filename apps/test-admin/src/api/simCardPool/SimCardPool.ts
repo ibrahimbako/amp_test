@@ -1,6 +1,7 @@
 export type SimCardPool = {
-  createdAt: Date;
+  createdAt: Date | null;
+  gammuExcluded: string | null;
   id: string;
   pool: string;
-  updatedAt: string;
+  updatedAt: Date | null;
 };

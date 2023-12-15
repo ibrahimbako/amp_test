@@ -11,10 +11,22 @@ https://docs.amplication.com/how-to/custom-code
   */
 import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsString, IsOptional } from "class-validator";
+import { IsString, IsOptional, IsDate } from "class-validator";
+import { Type } from "class-transformer";
 
 @InputType()
 class SimCardPoolUpdateInput {
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  gammuExcluded?: string | null;
+
   @ApiProperty({
     required: false,
     type: String,
@@ -28,14 +40,14 @@ class SimCardPoolUpdateInput {
 
   @ApiProperty({
     required: false,
-    type: String,
   })
-  @IsString()
+  @IsDate()
+  @Type(() => Date)
   @IsOptional()
-  @Field(() => String, {
+  @Field(() => Date, {
     nullable: true,
   })
-  updatedAt?: string;
+  updatedAt?: Date | null;
 }
 
 export { SimCardPoolUpdateInput as SimCardPoolUpdateInput };

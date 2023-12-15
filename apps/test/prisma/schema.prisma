@@ -67,8 +67,9 @@ model Product {
 }
 
 model SimCardPool {
-  createdAt DateTime @default(now())
-  id        String   @id @default(cuid())
-  pool      String
-  updatedAt String
+  createdAt     DateTime? @default(now())
+  gammuExcluded String?
+  id            String    @id @default(cuid())
+  pool          String
+  updatedAt     DateTime?
 }

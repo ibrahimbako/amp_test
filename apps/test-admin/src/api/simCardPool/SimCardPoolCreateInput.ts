@@ -1,4 +1,5 @@
 export type SimCardPoolCreateInput = {
+  gammuExcluded?: string | null;
   pool: string;
-  updatedAt: string;
+  updatedAt?: Date | null;
 };

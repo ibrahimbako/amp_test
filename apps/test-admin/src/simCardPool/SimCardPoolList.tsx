@@ -13,6 +13,7 @@ export const SimCardPoolList = (props: ListProps): React.ReactElement => {
     >
       <Datagrid rowClick="show">
         <DateField source="createdAt" label="Created At" />
+        <TextField label="GammuExcluded" source="gammuExcluded" />
         <TextField label="ID" source="id" />
         <TextField label="Pool" source="pool" />
         <TextField label="Updated At" source="updatedAt" />

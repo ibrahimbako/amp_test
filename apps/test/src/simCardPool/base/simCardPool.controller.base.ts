@@ -52,6 +52,7 @@ export class SimCardPoolControllerBase {
       data: data,
       select: {
         createdAt: true,
+        gammuExcluded: true,
         id: true,
         pool: true,
         updatedAt: true,
@@ -77,6 +78,7 @@ export class SimCardPoolControllerBase {
       ...args,
       select: {
         createdAt: true,
+        gammuExcluded: true,
         id: true,
         pool: true,
         updatedAt: true,
@@ -103,6 +105,7 @@ export class SimCardPoolControllerBase {
       where: params,
       select: {
         createdAt: true,
+        gammuExcluded: true,
         id: true,
         pool: true,
         updatedAt: true,
@@ -138,6 +141,7 @@ export class SimCardPoolControllerBase {
         data: data,
         select: {
           createdAt: true,
+          gammuExcluded: true,
           id: true,
           pool: true,
           updatedAt: true,
@@ -172,6 +176,7 @@ export class SimCardPoolControllerBase {
         where: params,
         select: {
           createdAt: true,
+          gammuExcluded: true,
           id: true,
           pool: true,
           updatedAt: true,
